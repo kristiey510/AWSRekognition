@@ -1,7 +1,7 @@
-# Using AWS Rekognition to detect labels  
+# Using AWS Rekognition to Detect Labels  
 This repository provides original data(.jpeg images) that uses AWS Rekognition to detect the object using labels. Users can use this on their own data and add this to software that requires recognizing objects. Our goal is to provide image detection software that can aid visually impaired individuals. We explore the effects of image quality (brightness/sharpness/contrast) on select images to find if AWS Rekognition is equally effective in recognizing objects at different times of the day and regardless of image quality.
 
-## Adding data to S3 buckets to use Amazon Rekognition 
+## Adding Data to S3 Buckets to use Amazon Rekognition 
 Users must add their data into a newly created or existing S3 bucket in the form of .jpg or .png. 
 
 Navigate to the S3 bucket in the services tab to upload data in the form of images: 
@@ -42,7 +42,7 @@ We can select labels from the dictionary response to form a new dictionary or da
 <img width="968" alt="Screen Shot 2021-04-22 at 1 46 03 AM" src="https://user-images.githubusercontent.com/69918614/115662195-9f26fe80-a30c-11eb-803d-4e3d30bfeb04.png">
 
 
-## Transforming data 
+## Transforming Data 
 To adjust the brightness/sharpness/contrast levels for images, we create two directories in the SageMaker notebook instance, one containing original data named "orig-imgs" and one containing transformed data named "transformed-imgs".
 
 **Note:** We use scale from factor of 0.5 to 1 (intervals of 0.1) for brightness/contrast and 0 to 2 (intervals of 0.2) for sharpness. We use PIL (Python Imaging Library) to import Image and ImageEnhance modules that allow us to change features of the image. 
@@ -61,7 +61,7 @@ Navigate to the "orig-imgs" directory and add images to that directory. Make sur
 
 You will see the images in the transformed folder labeled with "imagename-featurechanged:level.jpg". We must import these folders into a S3 bucket to use AWS Rekognition on these photos.
 
-## Moving transformed data into S3 Bucket
+## Moving Transformed Data into S3 Bucket
 To move the transformed images and original images into an S3 bucket, we must upload them. To do this, use the code 
 
 <img width="695" alt="Screen Shot 2021-04-21 at 5 03 58 PM" src="https://user-images.githubusercontent.com/69918614/115620779-9c53eb80-a2c3-11eb-86d0-2a5992781dbb.png">
