@@ -84,6 +84,16 @@ We create data frames and export as csv files for two types of images: "crosswal
 <img width="904" alt="Screen Shot 2021-04-22 at 12 23 45 PM" src="https://user-images.githubusercontent.com/69918614/115750279-ff965a00-a365-11eb-9975-33c068067b69.png">
 
 ## Hypothesis Testing on transformed data
+We test for the significance in changing the metrics by conducting two-sample t-tests on the each category(food, crosswalk) using target labels (Food, Road) for each metric(Brightness/Sharpness/Contrast). 
+First import the created csv files using pandas: 
+<img width="615" alt="Screen Shot 2021-04-22 at 1 01 11 PM" src="https://user-images.githubusercontent.com/69918614/115754991-d2987600-a36a-11eb-9a24-0f660e5b4f58.png">
+
+We use a t-test for each metric using our "crosswalk" image with label "Road" and conclude: 
+<img width="896" alt="1792x590 png" src="https://user-images.githubusercontent.com/69918614/115755796-b943f980-a36b-11eb-9c51-707edd0cd455.png">
+
+<img width="978" alt="1956x592 png" src="https://user-images.githubusercontent.com/69918614/115755833-c4972500-a36b-11eb-9015-ae03dc4a9e35.png">
+
+<img width="869" alt="1738x578 png" src="https://user-images.githubusercontent.com/69918614/115755868-cbbe3300-a36b-11eb-89ad-d40fdcdce094.png">
 
 ## Architecture Diagram 
 
