@@ -68,7 +68,7 @@ To move the transformed images and original images into an S3 bucket, we must up
 
 We have created compressed files that we can download from SageMaker and upload to S3 bucket. 
 
-## Creating CSV files from the transformed data
+## Creating CSV files from the Transformed Data
 Using the transformed data located in the S3 bucket named "transformed-imgs-parmigiana", we can organize the data for data analysis by creating data frames to test on the data. We do this by getting the objects of all the images in the S3 bucket and creating dictionaries for our selected categories and images. 
 
 <img width="636" alt="Screen Shot 2021-04-22 at 12 32 45 PM" src="https://user-images.githubusercontent.com/69918614/115751284-0a9dba00-a367-11eb-83a3-7e82252399f6.png">
@@ -83,7 +83,7 @@ We create data frames and export as csv files for two types of images: "crosswal
 
 <img width="904" alt="Screen Shot 2021-04-22 at 12 23 45 PM" src="https://user-images.githubusercontent.com/69918614/115750279-ff965a00-a365-11eb-9975-33c068067b69.png">
 
-## Hypothesis Testing on transformed data
+## Hypothesis Testing on Transformed Data
 We test for the significance in changing the metrics by conducting two-sample t-tests on the each category(food, crosswalk) using target labels (Food, Road) for each metric(Brightness/Sharpness/Contrast). 
 First import the created csv files using pandas: 
 <img width="615" alt="Screen Shot 2021-04-22 at 1 01 11 PM" src="https://user-images.githubusercontent.com/69918614/115754991-d2987600-a36a-11eb-9a24-0f660e5b4f58.png">
