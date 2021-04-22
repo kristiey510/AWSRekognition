@@ -68,6 +68,23 @@ To move the transformed images and original images into an S3 bucket, we must up
 
 We have created compressed files that we can download from SageMaker and upload to S3 bucket. 
 
+## Creating CSV files from the transformed data
+Using the transformed data located in the S3 bucket named "transformed-imgs-parmigiana", we can organize the data for data analysis by creating data frames to test on the data. We do this by getting the objects of all the images in the S3 bucket and creating dictionaries for our selected categories and images. 
+
+<img width="636" alt="Screen Shot 2021-04-22 at 12 32 45 PM" src="https://user-images.githubusercontent.com/69918614/115751284-0a9dba00-a367-11eb-83a3-7e82252399f6.png">
+
+Our dictionary will have the keys "Image", Category(Brightness, Sharpness, Contrast), "Label", and Confidence Level:
+
+<img width="1086" alt="Screen Shot 2021-04-22 at 12 23 34 PM" src="https://user-images.githubusercontent.com/69918614/115750302-06bd6800-a366-11eb-9bd8-47756a687de8.png">
+
+We create data frames and export as csv files for two types of images: "crosswalk" that identifies "Road" label and "food" that identifies "Food" label for each metric(Brightness/Sharpness/Contrast).
+
+<img width="929" alt="Screen Shot 2021-04-22 at 12 23 41 PM" src="https://user-images.githubusercontent.com/69918614/115750318-09b85880-a366-11eb-847c-e767ced01789.png">
+
+<img width="904" alt="Screen Shot 2021-04-22 at 12 23 45 PM" src="https://user-images.githubusercontent.com/69918614/115750279-ff965a00-a365-11eb-9975-33c068067b69.png">
+
+## Hypothesis Testing on transformed data
+
 ## Architecture Diagram 
 
 <img width="690" alt="Screen Shot 2021-04-21 at 5 03 58 PM" src="https://github.com/kristiey510/AWSRekognition/blob/main/Architectural%20Diagram.jpg">
