@@ -71,6 +71,12 @@ We have created compressed files that we can download from SageMaker and upload 
 ## Architecture Diagram 
 
 
+<img width="690" alt="Screen Shot 2021-04-21 at 5 03 58 PM" src="https://github.com/kristiey510/AWSRekognition/blob/main/Architectural%20Diagram.jpg">
+
+
+
+
+
 
 
 
