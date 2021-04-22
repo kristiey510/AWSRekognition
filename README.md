@@ -70,9 +70,9 @@ We have created compressed files that we can download from SageMaker and upload 
 
 ## Architecture Diagram 
 
-
 <img width="690" alt="Screen Shot 2021-04-21 at 5 03 58 PM" src="https://github.com/kristiey510/AWSRekognition/blob/main/Architectural%20Diagram.jpg">
 
+We initially collected 10 different pictures for each of three categories (i.e. transportation, food, crosswalk). Afterwards, we transformed each picture into 20 pictures, with 10 of them having different levels of contrast and 10 different brightness. Utilizing Amazon Simple Storage Service (S3), we uploaded all the orginal and processed pictures into the  S3 bucket for our project. Then, we used the Amazon Rekognition Service to label the pictures and got a confidence score for each one. At last, we conducted hypothesis testing on the average of confidence scores and made conclusion based on p-value of the test.
 
 
 
